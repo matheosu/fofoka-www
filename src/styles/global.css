@@ -270,10 +270,24 @@ input, textarea, select {
   transform: translateY(30px);
   transition: opacity 600ms ease-out, transform 600ms ease-out;
 }
+.reveal-left  { opacity: 0; transform: translateX(-30px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+.reveal-right { opacity: 0; transform: translateX(30px);  transition: opacity 600ms ease-out, transform 600ms ease-out; }
+.reveal-scale { opacity: 0; transform: scale(0.95);        transition: opacity 600ms ease-out, transform 600ms ease-out; }
 
-.reveal.visible {
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-scale.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* ============================================================

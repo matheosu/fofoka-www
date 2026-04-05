@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="52%">
+      <stop offset="0%"   stop-color="#E8593C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0F0F0E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="38%" r="28%">
+      <stop offset="0%"   stop-color="#E8593C" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0F0F0E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0F0F0E"/>
+
+  <!-- Glow layers -->
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#FFF7F0" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#FFF7F0" stroke-opacity="0.03" stroke-width="1"/>
+
+  <!-- Pin mascot — scaled from 240×300 → ~140×175, centered at x=600 -->
+  <g transform="translate(530, 52) scale(0.583)">
+    <!-- Pin body -->
+    <path d="M120 8C70 8 28 48 28 92C28 148 120 228 120 228S212 148 212 92C212 48 170 8 120 8Z" fill="#E8593C"/>
+    <!-- Mask band -->
+    <path d="M42 78C42 78 65 64 120 64C175 64 198 78 198 78L198 100C198 100 175 114 120 114C65 114 42 100 42 100Z" fill="#FFF7F0" opacity="0.9"/>
+    <!-- Eye whites -->
+    <ellipse cx="82" cy="89" rx="22" ry="15" fill="#0F0F0E"/>
+    <ellipse cx="158" cy="89" rx="22" ry="15" fill="#0F0F0E"/>
+    <!-- Iris -->
+    <circle cx="86" cy="89" r="9" fill="#E8593C"/>
+    <circle cx="162" cy="89" r="9" fill="#E8593C"/>
+    <!-- Pupils -->
+    <circle cx="88" cy="87" r="3.5" fill="#A33520"/>
+    <circle cx="164" cy="87" r="3.5" fill="#A33520"/>
+    <!-- Highlights -->
+    <circle cx="90" cy="85" r="1.8" fill="#FFF7F0"/>
+    <circle cx="166" cy="85" r="1.8" fill="#FFF7F0"/>
+  </g>
+
+  <!-- "fofoka" wordmark -->
+  <text
+    x="600" y="340"
+    text-anchor="middle"
+    font-family="Arial Black, Arial, sans-serif"
+    font-weight="900"
+    font-size="100"
+    fill="#E8593C"
+    letter-spacing="6"
+  >fofoka</text>
+
+  <!-- Tagline -->
+  <text
+    x="600" y="408"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="22"
+    fill="#FFF7F0"
+    opacity="0.38"
+    letter-spacing="10"
+  >sussurra · localiza · some</text>
+
+  <!-- Descriptor -->
+  <text
+    x="600" y="468"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="24"
+    fill="#FFF7F0"
+    opacity="0.5"
+    letter-spacing="1"
+  >Fofocas anônimas do seu bairro</text>
+
+  <!-- Bottom domain -->
+  <text
+    x="600" y="576"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="18"
+    fill="#FFF7F0"
+    opacity="0.22"
+    letter-spacing="4"
+  >fofoka.com</text>
+
+  <!-- Corner dots decoration -->
+  <circle cx="48"   cy="48"   r="3" fill="#E8593C" opacity="0.25"/>
+  <circle cx="1152" cy="48"   r="3" fill="#E8593C" opacity="0.25"/>
+  <circle cx="48"   cy="582"  r="3" fill="#E8593C" opacity="0.25"/>
+  <circle cx="1152" cy="582"  r="3" fill="#E8593C" opacity="0.25"/>
+</svg>

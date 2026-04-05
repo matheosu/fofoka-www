@@ -96,25 +96,27 @@ const defaultCanonical = `${siteUrl}/pt${canonicalPath === '/' ? '' : canonicalP
 
     <!-- Scroll reveal -->
     <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              const el = entry.target as HTMLElement;
-              const delay = el.dataset.delay ? parseInt(el.dataset.delay) : 0;
-              setTimeout(() => {
-                el.classList.add('visible');
-              }, delay);
-              observer.unobserve(el);
-            }
-          });
-        },
-        { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
-      );
+      const revealSelectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+      const allReveal = document.querySelectorAll<HTMLElement>(revealSelectors);
 
-      document.querySelectorAll('.reveal').forEach((el) => {
-        observer.observe(el);
-      });
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        allReveal.forEach((el) => el.classList.add('visible'));
+      } else {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const el = entry.target as HTMLElement;
+                const delay = el.dataset.delay ? parseInt(el.dataset.delay) : 0;
+                setTimeout(() => el.classList.add('visible'), delay);
+                observer.unobserve(el);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+        );
+        allReveal.forEach((el) => observer.observe(el));
+      }
     </script>
   </body>
 </html>
