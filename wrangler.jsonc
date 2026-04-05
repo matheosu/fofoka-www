@@ -1,7 +1,0 @@
-{
-  "name": "fofoka-www",
-  "compatibility_date": "2026-04-05",
-  "assets": {
-    "directory": "./dist"
-  }
-}
