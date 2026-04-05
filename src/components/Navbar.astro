@@ -1,0 +1,361 @@
+---
+import pt from '../i18n/pt.json';
+import en from '../i18n/en.json';
+
+export interface Props {
+  lang: 'pt' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = lang === 'pt' ? pt : en;
+
+const prefix = `/${lang}`;
+
+// Current page path for active link detection
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { key: 'features',  label: t.nav.features,  href: `${prefix}/#recursos` },
+  { key: 'security',  label: t.nav.security,   href: `${prefix}/#seguranca` },
+  { key: 'help',      label: t.nav.help,        href: `${prefix}/ajuda` },
+];
+
+const altLang = lang === 'pt' ? 'en' : 'pt';
+const altLabel = lang === 'pt' ? en.nav.lang_label : pt.nav.lang_label;
+
+// Build alternate language URL (swap /pt/ ↔ /en/)
+const altPath = currentPath.replace(`/${lang}`, `/${altLang}`);
+---
+
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+
+    <!-- Logo -->
+    <a href={`${prefix}/`} class="navbar__logo" aria-label="Fofoka — Início">
+      <img
+        src="/assets/logos/logo-darkmode.svg"
+        alt="Fofoka logo"
+        width="28"
+        height="28"
+        class="navbar__logo-icon"
+      />
+      <span class="navbar__logo-text">fofoka</span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="navbar__links" aria-label="Navegação principal">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={['navbar__link', { 'navbar__link--active': currentPath.includes(link.key) }]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Right actions -->
+    <div class="navbar__actions">
+      <!-- Language switcher -->
+      <a href={altPath} class="pill navbar__lang" aria-label={`Switch to ${altLang.toUpperCase()}`}>
+        {altLabel}
+      </a>
+
+      <!-- CTA -->
+      <a href={`${prefix}/#download`} class="btn btn-primary navbar__cta">
+        {t.nav.download}
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button
+        class="navbar__hamburger"
+        id="hamburger"
+        aria-label={t.nav.toggle_menu}
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+        <span class="navbar__hamburger-bar"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+    <nav class="navbar__mobile-links">
+      {navLinks.map((link) => (
+        <a href={link.href} class="navbar__mobile-link">
+          {link.label}
+        </a>
+      ))}
+      <a href={altPath} class="navbar__mobile-link navbar__mobile-lang">
+        {altLabel}
+      </a>
+      <a href={`${prefix}/#download`} class="btn btn-primary navbar__mobile-cta">
+        {t.nav.download}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 64px;
+    background: rgba(15, 15, 14, 0.6);
+    border-bottom: 1px solid transparent;
+    transition: background var(--transition-base), border-color var(--transition-base), backdrop-filter var(--transition-base);
+  }
+
+  .navbar.scrolled {
+    background: rgba(15, 15, 14, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: var(--border);
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    gap: 32px;
+  }
+
+  /* Logo */
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .navbar__logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .navbar__logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--fogo);
+    letter-spacing: 0.5px;
+  }
+
+  /* Desktop links */
+  .navbar__links {
+    display: none;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+  }
+
+  @media (min-width: 768px) {
+    .navbar__links {
+      display: flex;
+    }
+  }
+
+  .navbar__link {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-2);
+    transition: color var(--transition-fast);
+    position: relative;
+  }
+
+  .navbar__link:hover,
+  .navbar__link--active {
+    color: var(--text);
+  }
+
+  .navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--fogo);
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+  }
+
+  .navbar__link:hover::after,
+  .navbar__link--active::after {
+    transform: scaleX(1);
+  }
+
+  /* Right actions */
+  .navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .navbar__lang {
+    font-size: 12px;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: border-color var(--transition-fast), color var(--transition-fast);
+  }
+
+  .navbar__lang:hover {
+    border-color: var(--border-hover);
+    color: var(--text);
+  }
+
+  .navbar__cta {
+    display: none;
+    font-size: 13px;
+    padding: 8px 18px;
+  }
+
+  @media (min-width: 768px) {
+    .navbar__cta {
+      display: inline-flex;
+    }
+  }
+
+  /* Hamburger */
+  .navbar__hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    transition: background var(--transition-fast);
+  }
+
+  .navbar__hamburger:hover {
+    background: var(--bg-card);
+  }
+
+  .navbar__hamburger-bar {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: var(--text-2);
+    border-radius: 2px;
+    transition: transform var(--transition-base), opacity var(--transition-base);
+  }
+
+  .navbar__hamburger.open .navbar__hamburger-bar:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+  }
+
+  .navbar__hamburger.open .navbar__hamburger-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar__hamburger.open .navbar__hamburger-bar:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+  }
+
+  @media (min-width: 768px) {
+    .navbar__hamburger {
+      display: none;
+    }
+  }
+
+  /* Mobile menu */
+  .navbar__mobile {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 15, 14, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px;
+    z-index: 99;
+  }
+
+  .navbar__mobile.open {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .navbar__mobile {
+      display: none !important;
+    }
+  }
+
+  .navbar__mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .navbar__mobile-link {
+    display: block;
+    padding: 12px 8px;
+    font-size: 15px;
+    color: var(--text-2);
+    border-radius: 8px;
+    transition: color var(--transition-fast), background var(--transition-fast);
+  }
+
+  .navbar__mobile-link:hover {
+    color: var(--text);
+    background: var(--bg-card);
+  }
+
+  .navbar__mobile-lang {
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+    padding-top: 16px;
+  }
+
+  .navbar__mobile-cta {
+    margin-top: 12px;
+    width: 100%;
+    justify-content: center;
+  }
+</style>
+
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  const onScroll = () => {
+    if (window.scrollY > 20) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.contains('open');
+    mobileMenu?.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(!isOpen));
+    mobileMenu?.setAttribute('aria-hidden', String(isOpen));
+  });
+
+  // Close mobile menu on link click
+  mobileMenu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger?.classList.remove('open');
+      hamburger?.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+</script>

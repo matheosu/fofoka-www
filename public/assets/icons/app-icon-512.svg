@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="115" fill="#E8593C"/>
+  <!-- Mask band -->
+  <g transform="translate(256, 230) scale(1.6)">
+    <path d="M-78 -4C-78 -4 -55 -18 0 -18C55 -18 78 -4 78 -4L78 18C78 18 55 32 0 32C-55 32 -78 18 -78 18Z" fill="#1A1A18"/>
+    <ellipse cx="-38" cy="7" rx="22" ry="15" fill="#FFF7F0"/>
+    <ellipse cx="38" cy="7" rx="22" ry="15" fill="#FFF7F0"/>
+    <circle cx="-34" cy="7" r="9" fill="#E8593C"/>
+    <circle cx="42" cy="7" r="9" fill="#E8593C"/>
+    <circle cx="-32" cy="5" r="3.5" fill="#A33520"/>
+    <circle cx="44" cy="5" r="3.5" fill="#A33520"/>
+    <circle cx="-30" cy="3" r="1.5" fill="#FFF7F0"/>
+    <circle cx="46" cy="3" r="1.5" fill="#FFF7F0"/>
+  </g>
+</svg>

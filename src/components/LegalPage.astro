@@ -1,0 +1,261 @@
+---
+/**
+ * LegalPage — layout reutilizável para páginas legais (privacidade, termos, diretrizes).
+ * Renderiza: cabeçalho + TOC lateral + seções numeradas.
+ */
+export interface Section {
+  title: string;
+  body: string[];
+}
+
+export interface Props {
+  title: string;
+  last_updated: string;
+  intro: string;
+  sections: Section[];
+  backLabel: string;
+  backHref: string;
+}
+
+const { title, last_updated, intro, sections, backLabel, backHref } = Astro.props;
+---
+
+<div class="legal">
+  <div class="container legal__wrap">
+
+    <!-- Header -->
+    <header class="legal__header">
+      <a href={backHref} class="legal__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        {backLabel}
+      </a>
+      <h1 class="legal__title">{title}</h1>
+      <p class="legal__date">{last_updated}</p>
+      <p class="legal__intro">{intro}</p>
+    </header>
+
+    <div class="legal__body">
+
+      <!-- TOC sidebar (desktop) -->
+      <nav class="legal__toc" aria-label="Índice">
+        <p class="legal__toc-label">Neste documento</p>
+        <ol class="legal__toc-list">
+          {sections.map((s, i) => (
+            <li>
+              <a href={`#section-${i}`} class="legal__toc-link">
+                <span class="legal__toc-num">{String(i + 1).padStart(2, '0')}</span>
+                {s.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <!-- Sections -->
+      <div class="legal__sections">
+        {sections.map((s, i) => (
+          <section class="legal__section" id={`section-${i}`}>
+            <h2 class="legal__section-title">
+              <span class="legal__section-num">{String(i + 1).padStart(2, '0')}</span>
+              {s.title}
+            </h2>
+            {s.body.map((p) => (
+              <p class="legal__p">{p}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+.legal {
+  padding: 64px 0 96px;
+  min-height: 70vh;
+}
+
+.legal__wrap {
+  max-width: 1080px;
+}
+
+/* Header */
+.legal__header {
+  max-width: 720px;
+  margin-bottom: 64px;
+}
+
+.legal__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-3);
+  margin-bottom: 32px;
+  transition: color var(--transition-fast);
+}
+
+.legal__back:hover { color: var(--text-2); }
+
+.legal__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 40px);
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.legal__date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.legal__intro {
+  font-size: 16px;
+  color: var(--text-2);
+  line-height: 1.75;
+  padding-left: 16px;
+  border-left: 2px solid var(--fogo);
+}
+
+/* Body: TOC + sections side-by-side on desktop */
+.legal__body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .legal__body {
+    grid-template-columns: 220px 1fr;
+    gap: 64px;
+  }
+}
+
+/* TOC */
+.legal__toc {
+  display: none;
+  position: sticky;
+  top: 88px;
+}
+
+@media (min-width: 900px) {
+  .legal__toc { display: block; }
+}
+
+.legal__toc-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 16px;
+}
+
+.legal__toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legal__toc-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--text-3);
+  line-height: 1.4;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.legal__toc-link:hover {
+  color: var(--text-2);
+  background: rgba(255,247,240,0.04);
+}
+
+.legal__toc-link.active {
+  color: var(--fogo);
+  background: rgba(232,89,60,0.06);
+}
+
+.legal__toc-num {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-3);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Sections */
+.legal__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+.legal__section {
+  scroll-margin-top: 88px;
+}
+
+.legal__section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(17px, 2.5vw, 20px);
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal__section-num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fogo);
+  flex-shrink: 0;
+}
+
+.legal__p {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-top: 12px;
+}
+
+.legal__p:first-of-type { margin-top: 0; }
+</style>
+
+<script>
+  // Highlight active TOC link on scroll
+  const sections = document.querySelectorAll('.legal__section');
+  const tocLinks = document.querySelectorAll('.legal__toc-link');
+
+  if (sections.length && tocLinks.length) {
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((l) => {
+              l.classList.toggle('active', l.getAttribute('href') === `#${id}`);
+            });
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -60% 0px' }
+    );
+    sections.forEach((s) => obs.observe(s));
+  }
+</script>

@@ -1,0 +1,462 @@
+{
+  "lang": "pt",
+  "locale": "pt-BR",
+  "dir": "ltr",
+
+  "nav": {
+    "features": "Recursos",
+    "security": "Segurança",
+    "help": "Ajuda",
+    "download": "Baixar app",
+    "contact": "Contato",
+    "toggle_menu": "Abrir menu",
+    "lang_label": "🇧🇷 PT"
+  },
+
+  "hero": {
+    "title_1": "Descubra o que está acontecendo",
+    "title_2": "ao seu redor.",
+    "title_3": "Anonimamente.",
+    "subtitle": "Fofocas do seu bairro, sem revelar quem você é. Poste, curta e suma — só quem está por perto pode ver.",
+    "tagline": "sussurra · localiza · some",
+    "app_store": "Disponível na App Store",
+    "google_play": "Disponível no Google Play",
+    "coming_soon": "Em breve nas lojas"
+  },
+
+  "how_it_works": {
+    "title": "Como funciona",
+    "location": {
+      "title": "Localização",
+      "desc": "Cada fofoca fica visível apenas para quem está próximo do local marcado. O raio é você quem define."
+    },
+    "anonymous": {
+      "title": "Anônimo",
+      "desc": "Sem nome real, sem foto de perfil. Sua identidade nunca é revelada — nem para o app."
+    },
+    "ephemeral": {
+      "title": "Efêmero",
+      "desc": "Fofocas expiram com o tempo. O que foi sussurrado, some — como devia ser."
+    }
+  },
+
+  "features": {
+    "title": "Recursos",
+    "temperature": {
+      "title": "Temperatura das fofocas",
+      "desc": "Quanto mais curtidas, mais quente fica a fofoca. Acompanhe o que está pegando fogo no seu bairro em tempo real.",
+      "levels": {
+        "on_fire": "pegando fogo",
+        "hot": "quente",
+        "normal": "normal",
+        "cold": "fria"
+      }
+    },
+    "comments": {
+      "title": "Comentários anônimos",
+      "desc": "Responda fofocas sem revelar sua identidade. A conversa continua, o anonimato permanece."
+    },
+    "likes": {
+      "title": "Curtidas e reações",
+      "desc": "Curta ou discorde de fofocas. O sistema de reações mostra o termômetro da vizinhança."
+    },
+    "hashtags": {
+      "title": "Hashtags",
+      "desc": "Organize e encontre fofocas por tema. #casamento #trabalho #vizinho — você decide a categoria."
+    },
+    "emoji": {
+      "title": "Emoji como avatar",
+      "desc": "Cada fofoca ganha um emoji escolhido por você. É o seu rosto anônimo no feed."
+    },
+    "map": {
+      "title": "Mapa de fofocas",
+      "desc": "Veja pins no mapa com a temperatura de cada fofoca ao redor. Quanto maior o pin, mais quente a fofoca."
+    }
+  },
+
+  "ranking": {
+    "title": "Rankings & Conquistas",
+    "subtitle": "Seja o fofoqueiro mais famoso do seu bairro — sem que ninguém saiba que é você.",
+    "rankings": {
+      "title": "Rankings",
+      "items": [
+        "Fofocas mais quentes do bairro",
+        "Top fofoqueiros da cidade",
+        "Trending por estado",
+        "Ranking nacional"
+      ]
+    },
+    "achievements": {
+      "title": "Conquistas",
+      "items": [
+        "Isqueiro — 10 fofocas quentes",
+        "Incendiário — 50 fofocas quentes",
+        "Espião — 100 fofocas vistas",
+        "Queridinho — 500 curtidas",
+        "Lenda — Top 1 da cidade"
+      ]
+    },
+    "scale": "bairro → cidade → estado → país!"
+  },
+
+  "security": {
+    "title_1": "Anônimo, mas",
+    "title_2": "seguro.",
+    "subtitle": "Anonimato não é desculpa para assédio. O Fofoka tem um sistema robusto de moderação para manter o ambiente saudável.",
+    "reports": {
+      "harassment": {
+        "title": "Assédio",
+        "desc": "Conteúdo que intimida, ameaça ou persegue outros usuários é removido imediatamente."
+      },
+      "fake": {
+        "title": "Fake news",
+        "desc": "Desinformação e fofocas falsas são sinalizadas e verificadas pela comunidade."
+      },
+      "spam": {
+        "title": "Spam",
+        "desc": "Conteúdo repetitivo ou publicidade disfarçada é filtrado automaticamente."
+      },
+      "hate": {
+        "title": "Discurso de ódio",
+        "desc": "Conteúdo discriminatório ou que promova ódio é removido e o usuário banido."
+      }
+    },
+    "ai": "IA moderando 24 horas por dia",
+    "encryption": "Dados criptografados de ponta a ponta",
+    "report": "Report instantâneo com resposta em até 1h",
+    "privacy_link": "Ver política de privacidade completa"
+  },
+
+  "cta": {
+    "title_1": "Pronto para ouvir",
+    "title_2": "o que estão sussurrando?",
+    "counter": "Fofocas postadas hoje"
+  },
+
+  "footer": {
+    "product": "Produto",
+    "legal": "Legal",
+    "contact_title": "Contato",
+    "features": "Recursos",
+    "security": "Segurança",
+    "help": "Ajuda",
+    "privacy": "Privacidade",
+    "terms": "Termos de uso",
+    "guidelines": "Diretrizes",
+    "contact": "Contato",
+    "copyright": "© 2026 Fofoka. Todos os direitos reservados.",
+    "tagline": "sussurra · localiza · some",
+    "email": "contato@fofoka.com"
+  },
+
+  "help": {
+    "title": "Central de ajuda",
+    "subtitle": "Encontre respostas rápidas sobre o Fofoka.",
+    "search_placeholder": "Buscar pergunta...",
+    "no_results": "Nenhuma pergunta encontrada. Tente outros termos ou",
+    "no_results_link": "entre em contato.",
+    "categories": {
+      "all": "Todas",
+      "account": "Conta",
+      "privacy": "Privacidade",
+      "content": "Conteúdo",
+      "safety": "Segurança",
+      "technical": "Técnico"
+    },
+    "faq": [
+      {
+        "q": "Como o Fofoka garante meu anonimato?",
+        "a": "O Fofoka não coleta nome real, foto ou qualquer dado que identifique você. Sua conta é vinculada apenas a um identificador anônimo gerado no dispositivo. Nem nossa equipe consegue saber quem postou o quê.",
+        "cat": "privacy"
+      },
+      {
+        "q": "Quem pode ver as minhas fofocas?",
+        "a": "Apenas usuários que estão fisicamente próximos do local marcado na fofoca. O raio padrão é de 500 metros, mas você pode ajustar ao postar.",
+        "cat": "privacy"
+      },
+      {
+        "q": "Como faço para postar uma fofoca?",
+        "a": "Abra o app, toque no botão laranja (+), escreva o texto, escolha um emoji representativo, confirme sua localização e publique. É rápido e anônimo.",
+        "cat": "content"
+      },
+      {
+        "q": "O que são as temperaturas das fofocas?",
+        "a": "A temperatura mostra a popularidade: 'fria' (menos de 10 curtidas), 'normal' (10 a 99), 'quente' (100 a 499) e 'pegando fogo' (500 ou mais). Quanto mais quente, maior o pin no mapa.",
+        "cat": "content"
+      },
+      {
+        "q": "Como funciona o sistema de reports?",
+        "a": "Toque nos três pontinhos de qualquer fofoca e selecione 'Reportar'. Escolha a categoria (assédio, fake, spam ou discurso de ódio). Nossa IA analisa em minutos e a equipe humana revisa casos graves.",
+        "cat": "safety"
+      },
+      {
+        "q": "Posso deletar uma fofoca que postei?",
+        "a": "Sim. Como você não tem um perfil público, guarde o link da sua fofoca ou acesse pelo histórico do dispositivo. Na tela da fofoca, toque em '...' e selecione 'Deletar'.",
+        "cat": "account"
+      },
+      {
+        "q": "As fofocas expiram automaticamente?",
+        "a": "Sim. Fofocas frias (menos de 10 curtidas) somem após 24h. Quentes ficam até 7 dias. Pegando fogo podem ficar até 30 dias no ranking. Após isso, são deletadas permanentemente.",
+        "cat": "content"
+      },
+      {
+        "q": "O app usa muita bateria ou dados?",
+        "a": "O Fofoka é otimizado para consumo mínimo. A geolocalização é ativada apenas quando você abre o app — nunca em background sem sua permissão explícita.",
+        "cat": "technical"
+      },
+      {
+        "q": "Como funcionam as conquistas?",
+        "a": "Conquistas são desbloqueadas automaticamente quando você atinge marcos (ex: 10 fofocas quentes = Isqueiro). Você recebe uma notificação e o badge aparece no seu perfil anônimo.",
+        "cat": "account"
+      },
+      {
+        "q": "O Fofoka está disponível fora do Brasil?",
+        "a": "Atualmente o app está disponível em todo o Brasil. A expansão internacional está prevista para 2026. Siga nossas redes para novidades.",
+        "cat": "technical"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Fale com a gente",
+    "subtitle": "Respondemos em até 48 horas. Para assuntos urgentes de segurança, priorizamos em até 1 hora.",
+    "email_label": "Ou envie direto para",
+    "response_note": "Respondemos em até 48h úteis.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "subject": "Assunto",
+      "subjects": [
+        "Selecione um assunto",
+        "Suporte técnico",
+        "Report de conteúdo",
+        "Parceria / imprensa",
+        "Privacidade e dados",
+        "Outro"
+      ],
+      "message": "Mensagem",
+      "submit": "Enviar mensagem",
+      "sending": "Enviando...",
+      "success_title": "Mensagem enviada!",
+      "success_body": "Retornaremos em breve no e-mail informado.",
+      "error": "Ocorreu um erro. Tente novamente ou envie um e-mail diretamente.",
+      "required": "Campo obrigatório",
+      "placeholders": {
+        "name": "Seu nome",
+        "email": "seu@email.com",
+        "message": "Descreva sua dúvida ou problema..."
+      }
+    }
+  },
+
+  "privacy": {
+    "title": "Política de Privacidade",
+    "last_updated": "Última atualização: abril de 2026",
+    "intro": "O Fofoka foi projetado com privacidade como fundamento, não como recurso opcional. Este documento explica exatamente quais dados coletamos, por quê, e como protegemos sua identidade.",
+    "sections": [
+      {
+        "title": "Dados que coletamos",
+        "body": [
+          "O Fofoka coleta apenas o mínimo necessário para funcionar. Não coletamos nome real, e-mail, número de telefone, foto de perfil nem qualquer informação que permita identificar você como pessoa.",
+          "Identificador anônimo de dispositivo: um UUID gerado localmente e armazenado no seu dispositivo. Não está vinculado à sua identidade.",
+          "Dados de localização: coletados somente no momento de criação ou visualização de uma fofoca, nunca em background. Armazenamos apenas a coordenada aproximada (raio de 100m) associada à fofoca, não ao usuário.",
+          "Conteúdo postado: texto, emoji escolhido e hashtags das fofocas que você cria. Esse conteúdo é público para usuários próximos e expira conforme as regras de temperatura.",
+          "Dados de uso agregados: métricas anônimas como número de aberturas do app e interações, sem qualquer dado pessoal associado. Usamos isso exclusivamente para melhorar o produto."
+        ]
+      },
+      {
+        "title": "Como usamos seus dados",
+        "body": [
+          "Os dados coletados são usados exclusivamente para: (a) exibir fofocas relevantes pela sua localização, (b) calcular temperaturas e rankings, (c) moderar conteúdo impróprio, e (d) melhorar a experiência do app.",
+          "Não vendemos, alugamos nem compartilhamos seus dados com terceiros para fins publicitários. Nunca. O Fofoka não exibe anúncios e não tem modelo de negócio baseado em dados pessoais.",
+          "Dados de uso agregados e anonimizados podem ser compartilhados publicamente como estatísticas do produto (ex: 'X fofocas postadas por dia no Brasil')."
+        ]
+      },
+      {
+        "title": "Anonimato por design",
+        "body": [
+          "Diferente de outras redes sociais, o Fofoka foi construído para que seja impossível — tecnicamente — vincular uma fofoca a uma pessoa real.",
+          "O identificador de dispositivo não é enviado junto com as fofocas. Cada post é desassociado de qualquer origem identificável antes de ser armazenado.",
+          "Mesmo em caso de solicitação judicial, só conseguimos fornecer o conteúdo da fofoca e a coordenada aproximada — sem qualquer dado que identifique o autor."
+        ]
+      },
+      {
+        "title": "Armazenamento e retenção",
+        "body": [
+          "Fofocas são deletadas automaticamente conforme sua temperatura: frias em 24h, normais em 3 dias, quentes em 7 dias, e pegando fogo em até 30 dias.",
+          "O identificador de dispositivo é armazenado localmente no seu aparelho e pode ser apagado a qualquer momento desinstalando o app.",
+          "Backups de segurança são mantidos por até 7 dias e deletados automaticamente. Não armazenamos histórico de localização do usuário."
+        ]
+      },
+      {
+        "title": "Compartilhamento de dados",
+        "body": [
+          "Compartilhamos dados com prestadores de serviço estritamente necessários: infraestrutura de hospedagem (servidores em datacenters no Brasil), sistema de moderação de conteúdo por IA, e serviço de notificações push (token anônimo, sem nome ou e-mail).",
+          "Todos os prestadores são contratualmente obrigados a não usar os dados para outras finalidades e a seguir as mesmas práticas de privacidade do Fofoka.",
+          "Não há transferência de dados para fora do Brasil."
+        ]
+      },
+      {
+        "title": "Seus direitos (LGPD)",
+        "body": [
+          "Nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018), você tem direito a: confirmação da existência de tratamento, acesso aos dados, correção, anonimização, portabilidade, eliminação e informação sobre compartilhamento.",
+          "Como o Fofoka não vincula dados a identidades reais, alguns desses direitos são exercidos de forma diferente. Para solicitar a eliminação de dados associados ao seu identificador de dispositivo, acesse Configurações > Privacidade > Apagar meus dados.",
+          "Para outras solicitações, entre em contato com nosso encarregado de dados pelo e-mail privacidade@fofoka.com."
+        ]
+      },
+      {
+        "title": "Cookies e rastreamento",
+        "body": [
+          "O app móvel não usa cookies. O site fofoka.com usa apenas cookies estritamente necessários para funcionamento (sessão, preferência de idioma) — nenhum cookie de rastreamento ou publicidade.",
+          "Não utilizamos pixels de rastreamento, fingerprinting de dispositivo nem qualquer tecnologia de identificação cross-site."
+        ]
+      },
+      {
+        "title": "Encarregado de dados (DPO)",
+        "body": [
+          "Nosso Encarregado de Proteção de Dados está disponível para esclarecer dúvidas, receber solicitações e tratar reclamações relacionadas ao tratamento de dados pessoais.",
+          "Contato do DPO: privacidade@fofoka.com. Respondemos em até 15 dias úteis.",
+          "Esta política pode ser atualizada periodicamente. Em caso de mudanças relevantes, notificaremos via notificação no app com 30 dias de antecedência."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "title": "Termos de Uso",
+    "last_updated": "Última atualização: abril de 2026",
+    "intro": "Ao usar o Fofoka, você concorda com estes termos. Leia com atenção — especialmente a seção sobre conteúdo proibido, que define o que não toleramos.",
+    "sections": [
+      {
+        "title": "Aceitação dos termos",
+        "body": [
+          "O uso do aplicativo Fofoka e do site fofoka.com está condicionado à aceitação integral destes Termos de Uso. Se você não concordar com qualquer parte, não utilize o serviço.",
+          "Você deve ter pelo menos 16 anos para usar o Fofoka. Ao aceitar estes termos, você declara ter a idade mínima exigida.",
+          "Estes termos podem ser atualizados. Mudanças relevantes serão comunicadas com pelo menos 30 dias de antecedência via notificação no app."
+        ]
+      },
+      {
+        "title": "Uso do serviço",
+        "body": [
+          "O Fofoka é um serviço de publicação anônima de conteúdo geolocalizável. Você é responsável pelo conteúdo que publica, mesmo que de forma anônima.",
+          "Você se compromete a usar o serviço de acordo com a legislação brasileira vigente, estes termos e as Diretrizes da Comunidade.",
+          "Não é permitido usar o Fofoka para fins comerciais, automação de posts, scraping de conteúdo, engenharia reversa do app ou qualquer atividade que prejudique outros usuários ou a integridade do serviço."
+        ]
+      },
+      {
+        "title": "Conteúdo proibido",
+        "body": [
+          "É expressamente proibido publicar no Fofoka: conteúdo que configure assédio, ameaça, perseguição ou bullying; informações falsas que possam causar dano real a pessoas ou empresas; conteúdo sexual explícito ou pornografia; discurso de ódio com base em raça, gênero, orientação sexual, religião ou qualquer outra característica protegida.",
+          "Também são proibidos: spam e publicidade não autorizada; conteúdo que viole direitos autorais ou propriedade intelectual de terceiros; dados pessoais de outras pessoas (CPF, endereço, telefone, fotos sem consentimento); qualquer conteúdo que incentive atividade ilegal.",
+          "A violação dessas regras pode resultar em remoção de conteúdo, suspensão ou banimento permanente do dispositivo."
+        ]
+      },
+      {
+        "title": "Moderação e reports",
+        "body": [
+          "O Fofoka utiliza combinação de moderação automatizada por IA e revisão humana para identificar violações dos termos. A moderação automática é ativada em casos de alto risco (ameaças, discurso de ódio).",
+          "Qualquer usuário pode reportar conteúdo impróprio. Reports maliciosos ou em massa (coordenados para censurar conteúdo legítimo) também são considerados violação destes termos.",
+          "Decisões de moderação podem ser contestadas pelo processo de apelação descrito nas Diretrizes da Comunidade."
+        ]
+      },
+      {
+        "title": "Propriedade intelectual",
+        "body": [
+          "O conteúdo que você posta no Fofoka permanece de sua autoria (mesmo que anônima). Ao publicar, você concede ao Fofoka uma licença não-exclusiva, mundial e gratuita para exibir, reproduzir e distribuir esse conteúdo dentro do serviço.",
+          "A marca Fofoka, o logo do pin mascarado, o design do app e todos os elementos visuais são propriedade da Fofoka Tecnologia Ltda. e não podem ser usados sem autorização prévia.",
+          "Denúncias de violação de direitos autorais devem ser enviadas para legal@fofoka.com com as informações exigidas pela Lei 12.965/2014 (Marco Civil da Internet)."
+        ]
+      },
+      {
+        "title": "Limitação de responsabilidade",
+        "body": [
+          "O Fofoka é um serviço de intermediação de conteúdo gerado por usuários. Nos termos do Marco Civil da Internet, não somos responsáveis por conteúdo de terceiros publicado na plataforma, exceto após notificação por ordem judicial ou nos casos previstos em lei.",
+          "O serviço é fornecido 'como está', sem garantia de disponibilidade ininterrupta. Não nos responsabilizamos por danos decorrentes de uso indevido da plataforma por outros usuários.",
+          "Em nenhuma hipótese nossa responsabilidade total por danos excederá o valor pago pelo usuário pelo serviço nos últimos 12 meses (que é zero, já que o app é gratuito)."
+        ]
+      },
+      {
+        "title": "Alterações e encerramento",
+        "body": [
+          "Podemos modificar, suspender ou encerrar o serviço a qualquer momento. Mudanças que afetem negativamente usuários serão comunicadas com 30 dias de antecedência, exceto em casos de emergência legal ou de segurança.",
+          "Você pode encerrar sua participação a qualquer momento desinstalando o app. Como não coletamos dados identificáveis, não há 'exclusão de conta' no sentido tradicional.",
+          "Estes termos são regidos pela legislação brasileira. Eventuais disputas serão resolvidas no foro da comarca de São Paulo, SP."
+        ]
+      }
+    ]
+  },
+
+  "guidelines": {
+    "title": "Diretrizes da Comunidade",
+    "last_updated": "Última atualização: abril de 2026",
+    "intro": "O Fofoka existe para o bom humor, a curiosidade e a leveza do cotidiano. Estas diretrizes protegem esse espaço para todos — inclusive para você.",
+    "sections": [
+      {
+        "title": "O que você pode postar",
+        "body": [
+          "Fofocas sobre situações e lugares (não sobre pessoas específicas identificáveis): o que aconteceu no restaurante da esquina, a briga no condomínio, o evento surpresa no parque.",
+          "Observações engraçadas, curiosidades do bairro, alertas úteis para a vizinhança (buraco na rua, evento local, obra que atrapalha o trânsito).",
+          "Opiniões sobre serviços e estabelecimentos comerciais, desde que baseadas em experiência real e sem identificar funcionários específicos.",
+          "Histórias, relatos e comentários que sejam claramente humorísticos ou de entretenimento, desde que não prejudiquem pessoas reais."
+        ]
+      },
+      {
+        "title": "O que não é permitido",
+        "body": [
+          "Identificar pessoas reais pelo nome, apelido, descrição física detalhada ou qualquer outra informação que permita descobrir sua identidade. O anonimato protege a todos — quem posta e quem é postado.",
+          "Conteúdo que constitua assédio, ameaça, perseguição, stalking ou bullying, mesmo que não mencione nome. Tom de intimidação já é suficiente para remoção.",
+          "Informações falsas apresentadas como verdade com potencial de causar dano real: calúnia, difamação, fake news sobre saúde pública ou segurança.",
+          "Discurso de ódio baseado em raça, cor, etnia, religião, gênero, orientação sexual, deficiência ou qualquer outra característica. Humor ofensivo com essas bases também não é tolerado.",
+          "Conteúdo sexual explícito, nudez não-consensual ou qualquer material sexualizado envolvendo menores.",
+          "Divulgar dados pessoais de outras pessoas: CPF, endereço residencial, número de telefone, fotos, localização em tempo real."
+        ]
+      },
+      {
+        "title": "Como usar o sistema de reports",
+        "body": [
+          "Viu algo que viola estas diretrizes? Toque nos três pontinhos da fofoca e selecione 'Reportar'. Escolha a categoria que melhor descreve o problema.",
+          "Categorias disponíveis: Assédio (ameaças, perseguição, intimidação), Fake news (desinformação com potencial de dano), Spam (publicidade, repetição, automação), Discurso de ódio (discriminação, preconceito).",
+          "Após o report: nossa IA avalia em minutos. Casos de alto risco têm revisão humana em até 1 hora. Você receberá uma notificação com o resultado.",
+          "Reports maliciosos — usados para silenciar conteúdo legítimo — são levados a sério e podem resultar em suspensão de quem reporta."
+        ]
+      },
+      {
+        "title": "Consequências das violações",
+        "body": [
+          "Remoção de conteúdo: a fofoca é removida imediatamente. Você recebe uma notificação explicando o motivo.",
+          "Aviso formal: para primeiras violações leves, enviamos um aviso educativo sem penalidade.",
+          "Suspensão temporária: violações repetidas ou moderadas resultam em suspensão de 24h a 30 dias, durante os quais você pode ver mas não pode postar.",
+          "Banimento permanente de dispositivo: violações graves (ameaças, CSAM, discurso de ódio reiterado) resultam em ban permanente do dispositivo. Não é possível criar nova conta no mesmo aparelho.",
+          "Encaminhamento às autoridades: casos que configurem crimes (ameaças, pedofilia, incitação à violência) serão reportados às autoridades competentes conforme exigido por lei."
+        ]
+      },
+      {
+        "title": "Processo de apelação",
+        "body": [
+          "Acredita que seu conteúdo foi removido por engano? Você tem 7 dias após a remoção para solicitar revisão.",
+          "Como apelar: vá em Configurações > Minha Conta > Histórico de Moderação e toque em 'Contestar decisão' na fofoca removida. Explique por que acredita que a remoção foi indevida.",
+          "A revisão é feita por uma pessoa diferente da que tomou a decisão original. O prazo de resposta é de até 72 horas.",
+          "Se a apelação for procedente, o conteúdo é restaurado e a penalidade revertida. Se improcedente, a decisão é final.",
+          "Para casos de banimento permanente, o processo de apelação deve ser feito por e-mail para apelacao@fofoka.com, com prazo de 30 dias após o ban."
+        ]
+      }
+    ]
+  },
+
+  "seo": {
+    "site_name": "Fofoka",
+    "home_title": "Fofoka — Fofocas anônimas do seu bairro",
+    "home_description": "Descubra o que está acontecendo ao seu redor de forma anônima. Poste fofocas geolocalizadas, curta, comente e suma — só quem está por perto pode ver.",
+    "home_keywords": "fofoca, anonimato, geolocalização, rede social, bairro, app, gossip",
+    "help_title": "Ajuda — Fofoka",
+    "help_description": "Central de ajuda do Fofoka. Encontre respostas sobre anonimato, privacidade, conteúdo e recursos do app.",
+    "contact_title": "Contato — Fofoka",
+    "contact_description": "Entre em contato com a equipe Fofoka. Respondemos em até 48 horas.",
+    "privacy_title": "Política de Privacidade — Fofoka",
+    "privacy_description": "Saiba como o Fofoka protege sua privacidade e anonimato.",
+    "terms_title": "Termos de Uso — Fofoka",
+    "terms_description": "Termos e condições de uso do aplicativo Fofoka.",
+    "guidelines_title": "Diretrizes da Comunidade — Fofoka",
+    "guidelines_description": "Regras da comunidade Fofoka: o que é permitido, o que não é, e como funciona a moderação."
+  }
+}

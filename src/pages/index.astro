@@ -1,0 +1,17 @@
+---
+// Root page: redirect to /pt/ (default locale) or detect browser language
+---
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fofoka</title>
+    <script>
+      const lang = navigator.language.startsWith('pt') ? 'pt' : 'en';
+      window.location.replace('/' + lang + '/');
+    </script>
+    <noscript>
+      <meta http-equiv="refresh" content="0; url=/pt/" />
+    </noscript>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" width="240" height="300">
+  <!-- Pin body -->
+  <path d="M120 8C70 8 28 48 28 92C28 148 120 228 120 228S212 148 212 92C212 48 170 8 120 8Z" fill="#E8593C"/>
+  <!-- Mask band -->
+  <path d="M42 78C42 78 65 64 120 64C175 64 198 78 198 78L198 100C198 100 175 114 120 114C65 114 42 100 42 100Z" fill="#1A1A18"/>
+  <!-- Left eye hole -->
+  <ellipse cx="82" cy="89" rx="22" ry="15" fill="#FFF7F0"/>
+  <!-- Right eye hole -->
+  <ellipse cx="158" cy="89" rx="22" ry="15" fill="#FFF7F0"/>
+  <!-- Left iris -->
+  <circle cx="86" cy="89" r="9" fill="#E8593C"/>
+  <!-- Right iris -->
+  <circle cx="162" cy="89" r="9" fill="#E8593C"/>
+  <!-- Left pupil -->
+  <circle cx="88" cy="87" r="3.5" fill="#A33520"/>
+  <!-- Right pupil -->
+  <circle cx="164" cy="87" r="3.5" fill="#A33520"/>
+  <!-- Left highlight -->
+  <circle cx="90" cy="85" r="1.8" fill="#FFF7F0"/>
+  <!-- Right highlight -->
+  <circle cx="166" cy="85" r="1.8" fill="#FFF7F0"/>
+</svg>

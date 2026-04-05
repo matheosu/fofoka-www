@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import LegalPage from '../../components/LegalPage.astro';
+import en from '../../i18n/en.json';
+
+const t = en;
+---
+
+<Base
+  title={t.seo.guidelines_title}
+  description={t.seo.guidelines_description}
+  lang="en"
+  canonicalPath="/guidelines"
+>
+  <LegalPage
+    title={t.guidelines.title}
+    last_updated={t.guidelines.last_updated}
+    intro={t.guidelines.intro}
+    sections={t.guidelines.sections}
+    backLabel="← Back to home"
+    backHref="/en/"
+  />
+</Base>

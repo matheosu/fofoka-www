@@ -1,0 +1,494 @@
+---
+import Base from '../../layouts/Base.astro';
+import pt from '../../i18n/pt.json';
+
+const t = pt;
+const f = t.contact.form;
+---
+
+<Base
+  title={t.seo.contact_title}
+  description={t.seo.contact_description}
+  lang="pt"
+  canonicalPath="/contato"
+>
+  <div class="contact">
+    <div class="container contact__wrap">
+
+      <!-- Left: info -->
+      <div class="contact__info">
+        <a href="/pt/" class="contact__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Voltar ao início
+        </a>
+
+        <h1 class="contact__title">{t.contact.title}</h1>
+        <p class="contact__subtitle">{t.contact.subtitle}</p>
+
+        <div class="contact__email-card">
+          <div class="contact__email-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--fogo)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <p class="contact__email-label">{t.contact.email_label}</p>
+            <a href={`mailto:${t.footer.email}`} class="contact__email-addr">{t.footer.email}</a>
+          </div>
+        </div>
+
+        <div class="contact__response">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--curtir)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>{t.contact.response_note}</span>
+        </div>
+
+        <!-- Quick links -->
+        <nav class="contact__links">
+          <a href="/pt/ajuda" class="contact__link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Central de Ajuda
+          </a>
+          <a href="/pt/privacidade" class="contact__link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Privacidade e dados
+          </a>
+          <a href="/pt/diretrizes" class="contact__link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Diretrizes da comunidade
+          </a>
+        </nav>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact__form-wrap">
+        <form class="contact__form" id="contact-form" novalidate>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name" class="form-label">{f.name} <span aria-hidden="true">*</span></label>
+              <input
+                type="text"
+                id="f-name"
+                name="name"
+                class="form-input"
+                placeholder={f.placeholders.name}
+                autocomplete="name"
+                required
+              />
+              <span class="form-error" data-for="name">{f.required}</span>
+            </div>
+
+            <div class="form-field">
+              <label for="f-email" class="form-label">{f.email} <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="f-email"
+                name="email"
+                class="form-input"
+                placeholder={f.placeholders.email}
+                autocomplete="email"
+                required
+              />
+              <span class="form-error" data-for="email">{f.required}</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-subject" class="form-label">{f.subject} <span aria-hidden="true">*</span></label>
+            <div class="form-select-wrap">
+              <select id="f-subject" name="subject" class="form-input form-select" required>
+                {f.subjects.map((s, i) => (
+                  <option value={i === 0 ? '' : s} disabled={i === 0} selected={i === 0}>{s}</option>
+                ))}
+              </select>
+              <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </div>
+            <span class="form-error" data-for="subject">{f.required}</span>
+          </div>
+
+          <div class="form-field">
+            <label for="f-message" class="form-label">{f.message} <span aria-hidden="true">*</span></label>
+            <textarea
+              id="f-message"
+              name="message"
+              class="form-input form-textarea"
+              placeholder={f.placeholders.message}
+              rows={5}
+              required
+            ></textarea>
+            <span class="form-error" data-for="message">{f.required}</span>
+          </div>
+
+          <button type="submit" class="form-submit btn btn-primary" id="submit-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            <span id="submit-label">{f.submit}</span>
+          </button>
+
+          <!-- Error banner -->
+          <div class="form-banner form-banner--error" id="form-error" hidden>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            {f.error}
+          </div>
+        </form>
+
+        <!-- Success state -->
+        <div class="form-success" id="form-success" hidden>
+          <div class="form-success__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--curtir)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h2 class="form-success__title">{f.success_title}</h2>
+          <p class="form-success__body">{f.success_body}</p>
+          <a href="/pt/" class="btn btn-primary">Voltar ao início</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</Base>
+
+<style>
+.contact {
+  padding: 64px 0 96px;
+  min-height: 70vh;
+}
+
+.contact__wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: start;
+  max-width: 1000px;
+}
+
+@media (min-width: 900px) {
+  .contact__wrap {
+    grid-template-columns: 360px 1fr;
+    gap: 72px;
+  }
+}
+
+/* Info side */
+.contact__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-3);
+  margin-bottom: 28px;
+  transition: color var(--transition-fast);
+}
+.contact__back:hover { color: var(--text-2); }
+
+.contact__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(26px, 4vw, 36px);
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.contact__subtitle {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+
+.contact__email-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: rgba(255,247,240,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 16px;
+}
+
+.contact__email-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(232,89,60,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact__email-label {
+  font-size: 11px;
+  color: var(--text-3);
+  margin-bottom: 3px;
+}
+
+.contact__email-addr {
+  font-size: 14px;
+  color: var(--fogo);
+  font-weight: 500;
+  transition: opacity var(--transition-fast);
+}
+.contact__email-addr:hover { opacity: 0.75; }
+
+.contact__response {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-3);
+  margin-bottom: 32px;
+  padding-left: 4px;
+}
+
+.contact__links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text-2);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.contact__link:hover {
+  color: var(--text);
+  background: rgba(255,247,240,0.04);
+}
+.contact__link svg { color: var(--text-3); flex-shrink: 0; }
+
+/* Form */
+.contact__form-wrap {
+  position: sticky;
+  top: 88px;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 540px) {
+  .form-row { grid-template-columns: 1fr 1fr; }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+}
+.form-label span { color: var(--fogo); margin-left: 2px; }
+
+.form-input {
+  height: 48px;
+  padding: 0 16px;
+  background: rgba(255,247,240,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  color: var(--text);
+  font-size: 14px;
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  width: 100%;
+}
+
+.form-input::placeholder { color: var(--text-3); }
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--fogo);
+  background: rgba(232,89,60,0.04);
+}
+
+.form-input.has-error {
+  border-color: var(--report);
+  background: rgba(232,93,80,0.05);
+}
+
+.form-select-wrap {
+  position: relative;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.form-select option { background: var(--bg-elevated); color: var(--text); }
+
+.form-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--text-3);
+}
+
+.form-textarea {
+  height: auto;
+  padding: 14px 16px;
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-error {
+  font-size: 12px;
+  color: var(--report);
+  display: none;
+}
+.form-error.visible { display: block; }
+
+.form-submit {
+  height: 50px;
+  border-radius: 14px;
+  font-size: 15px;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.form-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.form-banner--error {
+  background: rgba(232,93,80,0.08);
+  border: 1px solid rgba(232,93,80,0.2);
+  color: var(--report);
+}
+
+/* Success */
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  padding: 56px 24px;
+}
+
+.form-success__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(69,178,107,0.12);
+  border: 1px solid rgba(69,178,107,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-success__title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.form-success__body {
+  font-size: 15px;
+  color: var(--text-2);
+  max-width: 320px;
+  line-height: 1.7;
+}
+</style>
+
+<script>
+  const form      = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const submitLbl = document.getElementById('submit-label') as HTMLElement;
+  const errBanner = document.getElementById('form-error') as HTMLElement;
+  const success   = document.getElementById('form-success') as HTMLElement;
+
+  const SENDING_LABEL = 'Enviando...';
+
+  function validateField(input: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement): boolean {
+    const err = form.querySelector<HTMLElement>(`[data-for="${input.name}"]`);
+    const invalid = !input.validity.valid;
+    input.classList.toggle('has-error', invalid);
+    if (err) err.classList.toggle('visible', invalid);
+    return !invalid;
+  }
+
+  // Validate on blur
+  form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]').forEach((el) => {
+    el.addEventListener('blur', () => validateField(el));
+    el.addEventListener('input', () => {
+      if (el.classList.contains('has-error')) validateField(el);
+    });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Validate all fields
+    let valid = true;
+    form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>('[required]').forEach((el) => {
+      if (!validateField(el)) valid = false;
+    });
+    if (!valid) return;
+
+    // Show loading
+    submitBtn.disabled = true;
+    submitLbl.textContent = SENDING_LABEL;
+    errBanner.hidden = true;
+
+    try {
+      // Simulated submit — replace with real endpoint
+      await new Promise<void>((res) => setTimeout(res, 1200));
+
+      // Show success
+      form.hidden = true;
+      success.hidden = false;
+    } catch {
+      errBanner.hidden = false;
+      submitBtn.disabled = false;
+      submitLbl.textContent = 'Enviar mensagem';
+    }
+  });
+</script>

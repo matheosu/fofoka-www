@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import LegalPage from '../../components/LegalPage.astro';
+import pt from '../../i18n/pt.json';
+
+const t = pt;
+---
+
+<Base
+  title={t.seo.privacy_title}
+  description={t.seo.privacy_description}
+  lang="pt"
+  canonicalPath="/privacidade"
+>
+  <LegalPage
+    title={t.privacy.title}
+    last_updated={t.privacy.last_updated}
+    intro={t.privacy.intro}
+    sections={t.privacy.sections}
+    backLabel="← Voltar ao início"
+    backHref="/pt/"
+  />
+</Base>

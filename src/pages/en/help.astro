@@ -1,0 +1,234 @@
+---
+import Base from '../../layouts/Base.astro';
+import en from '../../i18n/en.json';
+
+const t = en;
+const faq = t.help.faq;
+const cats = t.help.categories;
+---
+
+<Base
+  title={t.seo.help_title}
+  description={t.seo.help_description}
+  lang="en"
+  canonicalPath="/help"
+>
+  <div class="help">
+    <div class="container">
+
+      <header class="help__header">
+        <a href="/en/" class="help__back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to home
+        </a>
+        <h1 class="help__title">{t.help.title}</h1>
+        <p class="help__subtitle">{t.help.subtitle}</p>
+
+        <div class="help__search-wrap">
+          <svg class="help__search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input
+            type="search"
+            id="faq-search"
+            class="help__search"
+            placeholder={t.help.search_placeholder}
+            autocomplete="off"
+            aria-label={t.help.search_placeholder}
+          />
+          <button class="help__search-clear" id="search-clear" aria-label="Clear search" hidden>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="help__cats" role="tablist" aria-label="Filter by category">
+        {Object.entries(cats).map(([key, label]) => (
+          <button
+            class:list={['help__cat', { 'help__cat--active': key === 'all' }]}
+            data-cat={key}
+            role="tab"
+            aria-selected={key === 'all' ? 'true' : 'false'}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
+      <div class="help__faq" id="faq-list" role="tabpanel">
+        {faq.map((item) => (
+          <details
+            class="faq-item"
+            data-cat={item.cat}
+            data-q={item.q.toLowerCase()}
+            data-a={item.a.toLowerCase()}
+          >
+            <summary class="faq-item__summary">
+              <span class="faq-item__q">{item.q}</span>
+              <span class="faq-item__cat-pill">{cats[item.cat as keyof typeof cats]}</span>
+              <svg class="faq-item__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <div class="faq-item__body">
+              <p>{item.a}</p>
+            </div>
+          </details>
+        ))}
+
+        <div class="help__empty" id="faq-empty" hidden>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <p>
+            {t.help.no_results}
+            <a href="/en/contact">{t.help.no_results_link}</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="help__cta">
+        <p>Didn't find what you were looking for?</p>
+        <a href="/en/contact" class="btn btn-primary">Talk to the team</a>
+      </div>
+
+    </div>
+  </div>
+</Base>
+
+<style>
+.help { padding: 64px 0 96px; min-height: 70vh; }
+.help__header { max-width: 640px; margin-bottom: 40px; }
+.help__back {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: var(--text-3); margin-bottom: 28px;
+  transition: color var(--transition-fast);
+}
+.help__back:hover { color: var(--text-2); }
+.help__title {
+  font-family: var(--font-heading); font-weight: 700;
+  font-size: clamp(28px, 5vw, 40px); color: var(--text);
+  margin-bottom: 8px; line-height: 1.15;
+}
+.help__subtitle { font-size: 15px; color: var(--text-2); margin-bottom: 28px; }
+.help__search-wrap { position: relative; display: flex; align-items: center; }
+.help__search-icon { position: absolute; left: 16px; color: var(--text-3); pointer-events: none; }
+.help__search {
+  width: 100%; height: 52px; padding: 0 48px 0 48px;
+  background: rgba(255,247,240,0.04); border: 1px solid var(--border);
+  border-radius: var(--radius-input); color: var(--text); font-size: 15px;
+  font-family: var(--font-body); transition: border-color var(--transition-fast), background var(--transition-fast);
+  -webkit-appearance: none;
+}
+.help__search::placeholder { color: var(--text-3); }
+.help__search:focus { outline: none; border-color: var(--fogo); background: rgba(232,89,60,0.04); }
+.help__search-clear {
+  position: absolute; right: 14px; color: var(--text-3);
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+.help__search-clear:hover { color: var(--text); background: rgba(255,247,240,0.06); }
+.help__cats { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.help__cat {
+  padding: 6px 14px; border-radius: 20px; border: 1px solid var(--border);
+  font-size: 13px; color: var(--text-2); font-family: var(--font-body);
+  background: transparent; cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+.help__cat:hover { border-color: var(--border-hover); color: var(--text); }
+.help__cat--active { background: rgba(232,89,60,0.1); border-color: rgba(232,89,60,0.3); color: var(--fogo); }
+.help__faq {
+  display: flex; flex-direction: column; gap: 0;
+  border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-bottom: 40px;
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item[hidden] { display: none; }
+.faq-item__summary {
+  display: flex; align-items: center; gap: 12px; padding: 20px 24px;
+  cursor: pointer; list-style: none; user-select: none; transition: background var(--transition-fast);
+}
+.faq-item__summary::-webkit-details-marker { display: none; }
+.faq-item__summary::marker { display: none; }
+.faq-item__summary:hover { background: rgba(255,247,240,0.03); }
+details[open] > .faq-item__summary { background: rgba(232,89,60,0.04); }
+.faq-item__q { flex: 1; font-family: var(--font-heading); font-weight: 600; font-size: 15px; color: var(--text); line-height: 1.4; }
+.faq-item__cat-pill { display: none; padding: 2px 8px; border-radius: 20px; font-size: 10px; background: rgba(232,89,60,0.08); color: var(--fogo); white-space: nowrap; flex-shrink: 0; }
+@media (min-width: 640px) { .faq-item__cat-pill { display: inline-flex; } }
+.faq-item__chevron { color: var(--text-3); flex-shrink: 0; transition: transform 300ms ease; }
+details[open] > .faq-item__summary .faq-item__chevron { transform: rotate(180deg); color: var(--fogo); }
+.faq-item__body { padding: 0 24px 20px 24px; animation: faq-open 250ms ease-out; }
+.faq-item__body p { font-size: 14px; color: var(--text-2); line-height: 1.8; }
+@keyframes faq-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+.help__empty { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 56px 24px; color: var(--text-3); text-align: center; }
+.help__empty p { font-size: 14px; color: var(--text-2); }
+.help__empty a { color: var(--fogo); text-decoration: underline; text-underline-offset: 3px; }
+.help__cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; padding: 28px 32px; background: rgba(255,247,240,0.03); border: 1px solid var(--border); border-radius: 16px; }
+.help__cta p { font-size: 15px; color: var(--text-2); flex: 1; min-width: 160px; }
+</style>
+
+<script>
+  const searchInput = document.getElementById('faq-search') as HTMLInputElement;
+  const searchClear = document.getElementById('search-clear') as HTMLButtonElement;
+  const faqItems   = document.querySelectorAll<HTMLElement>('.faq-item');
+  const catBtns    = document.querySelectorAll<HTMLButtonElement>('.help__cat');
+  const emptyState = document.getElementById('faq-empty') as HTMLElement;
+
+  let activeCat = 'all';
+  let searchQuery = '';
+
+  function applyFilters() {
+    let visible = 0;
+    faqItems.forEach((item) => {
+      const cat  = item.dataset.cat ?? '';
+      const q    = item.dataset.q ?? '';
+      const a    = item.dataset.a ?? '';
+      const term = searchQuery.toLowerCase().trim();
+      const catMatch  = activeCat === 'all' || cat === activeCat;
+      const termMatch = !term || q.includes(term) || a.includes(term);
+      const show = catMatch && termMatch;
+      item.hidden = !show;
+      if (show) visible++;
+    });
+    emptyState.hidden = visible > 0;
+  }
+
+  catBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      activeCat = btn.dataset.cat ?? 'all';
+      catBtns.forEach((b) => {
+        b.classList.toggle('help__cat--active', b === btn);
+        b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+      });
+      applyFilters();
+    });
+  });
+
+  searchInput?.addEventListener('input', () => {
+    searchQuery = searchInput.value;
+    searchClear.hidden = !searchQuery;
+    applyFilters();
+    const term = searchQuery.trim();
+    faqItems.forEach((item) => {
+      const qEl = item.querySelector('.faq-item__q');
+      if (!qEl) return;
+      const text = qEl.textContent ?? '';
+      if (!term) { qEl.textContent = text; return; }
+      const regex = new RegExp(`(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      qEl.innerHTML = text.replace(regex, '<mark>$1</mark>');
+    });
+  });
+
+  searchClear?.addEventListener('click', () => {
+    searchInput.value = '';
+    searchQuery = '';
+    searchClear.hidden = true;
+    searchInput.focus();
+    applyFilters();
+    faqItems.forEach((item) => {
+      const qEl = item.querySelector('.faq-item__q');
+      if (qEl) qEl.textContent = qEl.textContent ?? '';
+    });
+  });
+</script>

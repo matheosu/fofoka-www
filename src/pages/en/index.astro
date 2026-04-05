@@ -1,0 +1,455 @@
+---
+import Base from '../../layouts/Base.astro';
+import en from '../../i18n/en.json';
+
+const t = en;
+const lang = 'en' as const;
+---
+
+<Base
+  title={t.seo.home_title}
+  description={t.seo.home_description}
+  keywords={t.seo.home_keywords}
+  lang={lang}
+  canonicalPath="/"
+>
+
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section class="hero section" id="inicio">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__pin">
+          <img
+            src="/assets/logos/logo-darkmode.svg"
+            alt="Fofoka mascot — masked pin"
+            width="120"
+            height="120"
+            class="hero__pin-img"
+          />
+        </div>
+
+        <h1 class="hero__title">
+          {t.hero.title_1}<br />
+          {t.hero.title_2}<br />
+          <span class="text-fogo">{t.hero.title_3}</span>
+        </h1>
+
+        <p class="hero__subtitle">{t.hero.subtitle}</p>
+
+        <div class="hero__store-btns" id="download">
+          <a href="#" class="store-btn" aria-label={t.hero.app_store}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="currentColor"/>
+            </svg>
+            <div class="store-btn__text">
+              <span class="store-btn__small">Download on the</span>
+              <span class="store-btn__main">App Store</span>
+            </div>
+          </a>
+
+          <a href="#" class="store-btn" aria-label={t.hero.google_play}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3.18 23.76c.3.17.64.24.99.2l12.6-7.27-2.89-2.89-10.7 9.96zM.5 1.5C.19 1.84 0 2.37 0 3.06v17.88c0 .69.19 1.22.5 1.56l.08.08 10.02-10.02v-.24L.58 1.42.5 1.5zM20.28 10.8l-2.71-1.56-3.2 3.2 3.2 3.2 2.73-1.57c.78-.45.78-1.82-.02-2.27zM4.17.24l12.6 7.27-2.89 2.89L3.18.44A1.2 1.2 0 014.17.24z" fill="currentColor"/>
+            </svg>
+            <div class="store-btn__text">
+              <span class="store-btn__small">Get it on</span>
+              <span class="store-btn__main">Google Play</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="hero__tagline">{t.hero.tagline}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       HOW IT WORKS
+  ====================================================== -->
+  <section class="section how" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title reveal">{t.how_it_works.title}</h2>
+
+      <div class="how__grid">
+        <div class="card how__card reveal" data-delay="0">
+          <div class="how__icon how__icon--local">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="how__card-title">{t.how_it_works.location.title}</h3>
+          <p class="how__card-desc">{t.how_it_works.location.desc}</p>
+        </div>
+
+        <div class="card how__card reveal" data-delay="100">
+          <div class="how__icon how__icon--anon">
+            <img src="/assets/logos/logo-darkmode.svg" alt="" width="28" height="28" aria-hidden="true" />
+          </div>
+          <h3 class="how__card-title">{t.how_it_works.anonymous.title}</h3>
+          <p class="how__card-desc">{t.how_it_works.anonymous.desc}</p>
+        </div>
+
+        <div class="card how__card reveal" data-delay="200">
+          <div class="how__icon how__icon--ephemeral">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="how__card-title">{t.how_it_works.ephemeral.title}</h3>
+          <p class="how__card-desc">{t.how_it_works.ephemeral.desc}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FEATURES
+  ====================================================== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <h2 class="section-title reveal">{t.features.title}</h2>
+
+      <div class="features__list">
+        <div class="features__item reveal">
+          <div class="features__text">
+            <h3 class="features__item-title">{t.features.temperature.title}</h3>
+            <p class="features__item-desc">{t.features.temperature.desc}</p>
+            <div class="features__pins">
+              <div class="features__pin-item">
+                <img src="/assets/pins/pin-pegando-fogo.svg" alt="On fire pin" width="28" height="36" />
+                <span class="features__pin-label" style="color: var(--fogo)">{t.features.temperature.levels.on_fire}</span>
+              </div>
+              <div class="features__pin-item">
+                <img src="/assets/pins/pin-quente.svg" alt="Hot pin" width="24" height="32" />
+                <span class="features__pin-label" style="color: var(--quente)">{t.features.temperature.levels.hot}</span>
+              </div>
+              <div class="features__pin-item">
+                <img src="/assets/pins/pin-normal.svg" alt="Normal pin" width="20" height="28" />
+                <span class="features__pin-label" style="color: var(--murmur)">{t.features.temperature.levels.normal}</span>
+              </div>
+              <div class="features__pin-item">
+                <img src="/assets/pins/pin-fria.svg" alt="Cold pin" width="18" height="24" />
+                <span class="features__pin-label" style="color: var(--rank)">{t.features.temperature.levels.cold}</span>
+              </div>
+            </div>
+          </div>
+          <div class="features__visual"></div>
+        </div>
+
+        <div class="features__item features__item--reverse reveal">
+          <div class="features__visual"></div>
+          <div class="features__text">
+            <h3 class="features__item-title">{t.features.comments.title}</h3>
+            <p class="features__item-desc">{t.features.comments.desc}</p>
+          </div>
+        </div>
+
+        <div class="features__item reveal">
+          <div class="features__text">
+            <h3 class="features__item-title">{t.features.hashtags.title}</h3>
+            <p class="features__item-desc">{t.features.hashtags.desc}</p>
+            <div class="features__hashtags">
+              <span class="features__tag">#wedding</span>
+              <span class="features__tag">#work</span>
+              <span class="features__tag">#neighbor</span>
+              <span class="features__tag">#neighborhood</span>
+            </div>
+          </div>
+          <div class="features__visual"></div>
+        </div>
+
+        <div class="features__item features__item--reverse reveal">
+          <div class="features__visual"></div>
+          <div class="features__text">
+            <h3 class="features__item-title">{t.features.map.title}</h3>
+            <p class="features__item-desc">{t.features.map.desc}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       RANKING & ACHIEVEMENTS
+  ====================================================== -->
+  <section class="section ranking" id="ranking">
+    <div class="container">
+      <h2 class="section-title reveal">{t.ranking.title}</h2>
+      <p class="ranking__subtitle reveal">{t.ranking.subtitle}</p>
+
+      <div class="ranking__grid">
+        <div class="card ranking__card reveal">
+          <h3 class="ranking__card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--quente)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            {t.ranking.rankings.title}
+          </h3>
+          <ul class="ranking__list">
+            {t.ranking.rankings.items.map((item) => (
+              <li class="ranking__list-item">
+                <span class="ranking__bullet" style="background: var(--quente)"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <p class="ranking__scale">
+            {t.ranking.scale.split('→').map((part, i, arr) => (
+              <>
+                <span>{part.trim()}</span>
+                {i < arr.length - 1 && <span class="ranking__arrow">→</span>}
+              </>
+            ))}
+          </p>
+        </div>
+
+        <div class="card ranking__card reveal" data-delay="100">
+          <h3 class="ranking__card-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--conquista)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+            </svg>
+            {t.ranking.achievements.title}
+          </h3>
+          <ul class="ranking__list">
+            {t.ranking.achievements.items.map((item) => (
+              <li class="ranking__list-item">
+                <span class="ranking__bullet" style="background: var(--conquista)"></span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       SAFETY
+  ====================================================== -->
+  <section class="section security" id="safety">
+    <div class="container">
+      <h2 class="section-title reveal">
+        {t.security.title_1} <span style="color: var(--curtir)">{t.security.title_2}</span>
+      </h2>
+      <p class="security__subtitle reveal">{t.security.subtitle}</p>
+
+      <div class="security__reports reveal">
+        <div class="security__report-card" style="background: rgba(232,93,80,0.08); border-color: rgba(232,93,80,0.15)">
+          <span class="security__report-icon">🚨</span>
+          <h4>{t.security.reports.harassment.title}</h4>
+          <p>{t.security.reports.harassment.desc}</p>
+        </div>
+        <div class="security__report-card" style="background: rgba(245,166,35,0.08); border-color: rgba(245,166,35,0.15)">
+          <span class="security__report-icon">⚠️</span>
+          <h4>{t.security.reports.fake.title}</h4>
+          <p>{t.security.reports.fake.desc}</p>
+        </div>
+        <div class="security__report-card" style="background: rgba(181,169,154,0.08); border-color: rgba(181,169,154,0.15)">
+          <span class="security__report-icon">📧</span>
+          <h4>{t.security.reports.spam.title}</h4>
+          <p>{t.security.reports.spam.desc}</p>
+        </div>
+        <div class="security__report-card" style="background: rgba(155,89,182,0.08); border-color: rgba(155,89,182,0.15)">
+          <span class="security__report-icon">🚫</span>
+          <h4>{t.security.reports.hate.title}</h4>
+          <p>{t.security.reports.hate.desc}</p>
+        </div>
+      </div>
+
+      <div class="security__trust reveal">
+        <div class="security__trust-item">
+          <span class="security__trust-icon">🤖</span>
+          <span>{t.security.ai}</span>
+        </div>
+        <div class="security__trust-item">
+          <span class="security__trust-icon">🔒</span>
+          <span>{t.security.encryption}</span>
+        </div>
+        <div class="security__trust-item">
+          <span class="security__trust-icon">⚡</span>
+          <span>{t.security.report}</span>
+        </div>
+      </div>
+
+      <div class="security__privacy-link reveal">
+        <a href="/en/privacy" class="text-fogo" style="font-size: 14px; text-decoration: underline; text-underline-offset: 3px;">
+          {t.security.privacy_link} →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CTA FINAL
+  ====================================================== -->
+  <section class="section cta-final" style="background: var(--bg-elevated)">
+    <div class="container cta-final__inner reveal">
+      <img
+        src="/assets/logos/logo-darkmode.svg"
+        alt="Fofoka"
+        width="80"
+        height="80"
+        class="cta-final__pin"
+      />
+      <h2 class="cta-final__title">
+        {t.cta.title_1}<br />
+        <span class="text-fogo">{t.cta.title_2}</span>
+      </h2>
+
+      <div class="hero__store-btns" style="justify-content: center;">
+        <a href="#" class="store-btn" aria-label={t.hero.app_store}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="currentColor"/>
+          </svg>
+          <div class="store-btn__text">
+            <span class="store-btn__small">Download on the</span>
+            <span class="store-btn__main">App Store</span>
+          </div>
+        </a>
+        <a href="#" class="store-btn" aria-label={t.hero.google_play}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M3.18 23.76c.3.17.64.24.99.2l12.6-7.27-2.89-2.89-10.7 9.96zM.5 1.5C.19 1.84 0 2.37 0 3.06v17.88c0 .69.19 1.22.5 1.56l.08.08 10.02-10.02v-.24L.58 1.42.5 1.5zM20.28 10.8l-2.71-1.56-3.2 3.2 3.2 3.2 2.73-1.57c.78-.45.78-1.82-.02-2.27zM4.17.24l12.6 7.27-2.89 2.89L3.18.44A1.2 1.2 0 014.17.24z" fill="currentColor"/>
+          </svg>
+          <div class="store-btn__text">
+            <span class="store-btn__small">Get it on</span>
+            <span class="store-btn__main">Google Play</span>
+          </div>
+        </a>
+      </div>
+
+      <p class="hero__tagline">{t.hero.tagline}</p>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  /* Reuse all styles from pt/index.astro — scoped styles are duplicated here for the EN page */
+  .hero {
+    min-height: calc(100vh - 64px);
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .hero__pin { animation: float 3s ease-in-out infinite; }
+  .hero__pin-img {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 8px 32px rgba(232, 89, 60, 0.35));
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%       { transform: translateY(-8px); }
+  }
+
+  .hero__title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(32px, 8vw, 48px);
+    line-height: 1.15;
+    color: var(--text);
+  }
+
+  .hero__subtitle {
+    font-size: clamp(15px, 2.5vw, 18px);
+    color: var(--text-2);
+    max-width: 480px;
+    line-height: 1.7;
+  }
+
+  .hero__store-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .store-btn__text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+  .store-btn__small { font-size: 10px; opacity: 0.7; font-weight: 400; }
+  .store-btn__main  { font-size: 15px; font-weight: 600; }
+
+  .hero__tagline {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--murmur);
+    letter-spacing: 5px;
+    text-transform: lowercase;
+    margin-top: 8px;
+  }
+
+  .how .section-title { margin-bottom: 48px; }
+  .how__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 768px) { .how__grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .how__card { display: flex; flex-direction: column; gap: 16px; }
+  .how__icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+  .how__icon--local    { background: rgba(52, 152, 219, 0.12); color: var(--local); }
+  .how__icon--anon     { background: rgba(232, 89, 60, 0.12); }
+  .how__icon--ephemeral{ background: rgba(181, 169, 154, 0.12); color: var(--murmur); }
+  .how__card-title { font-family: var(--font-heading); font-weight: 600; font-size: 18px; color: var(--text); }
+  .how__card-desc  { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+
+  .features .section-title { margin-bottom: 64px; }
+  .features__list { display: flex; flex-direction: column; gap: 80px; }
+  .features__item { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
+  @media (min-width: 1024px) {
+    .features__item { grid-template-columns: 1fr 1fr; }
+    .features__item--reverse .features__text  { order: 2; }
+    .features__item--reverse .features__visual{ order: 1; }
+  }
+  .features__item-title { font-family: var(--font-heading); font-weight: 600; font-size: clamp(20px, 3vw, 22px); color: var(--text); margin-bottom: 12px; }
+  .features__item-desc  { font-size: 16px; color: var(--text-2); line-height: 1.7; }
+  .features__pins { display: flex; align-items: flex-end; gap: 24px; margin-top: 24px; }
+  .features__pin-item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .features__pin-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.5px; }
+  .features__hashtags  { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .features__tag { display: inline-block; padding: 4px 10px; border-radius: 10px; background: rgba(232,89,60,0.1); color: var(--fogo); font-size: 12px; }
+  .features__visual { height: 280px; border-radius: 20px; border: 1px solid var(--border); background: var(--bg-card); position: relative; overflow: hidden; }
+  .features__visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(232,89,60,0.05), transparent 60%); }
+
+  .ranking .section-title { margin-bottom: 12px; }
+  .ranking__subtitle { text-align: center; color: var(--text-2); font-size: 16px; margin-bottom: 48px; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .ranking__grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  @media (min-width: 768px) { .ranking__grid { grid-template-columns: repeat(2, 1fr); } }
+  .ranking__card-title { display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-weight: 600; font-size: 18px; color: var(--text); margin-bottom: 24px; }
+  .ranking__list { display: flex; flex-direction: column; gap: 12px; }
+  .ranking__list-item { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-2); }
+  .ranking__bullet { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+  .ranking__scale { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); font-family: var(--font-mono); font-size: 11px; color: var(--text-3); }
+  .ranking__arrow { color: var(--fogo); font-weight: 700; }
+
+  .security .section-title { margin-bottom: 12px; }
+  .security__subtitle { text-align: center; color: var(--text-2); font-size: 16px; margin-bottom: 48px; max-width: 560px; margin-left: auto; margin-right: auto; }
+  .security__reports { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
+  @media (min-width: 768px) { .security__reports { grid-template-columns: repeat(4, 1fr); } }
+  .security__report-card { padding: 24px 20px; border: 1px solid; border-radius: var(--radius-card); display: flex; flex-direction: column; gap: 10px; }
+  .security__report-icon { font-size: 22px; }
+  .security__report-card h4 { font-family: var(--font-heading); font-weight: 600; font-size: 14px; color: var(--text); }
+  .security__report-card p  { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+  .security__trust { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+  @media (min-width: 768px) { .security__trust { flex-direction: row; gap: 40px; max-width: 100%; justify-content: center; } }
+  .security__trust-item { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-2); }
+  .security__trust-icon { font-size: 20px; flex-shrink: 0; }
+  .security__privacy-link { text-align: center; margin-top: 8px; }
+
+  .cta-final__inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; }
+  .cta-final__pin { filter: drop-shadow(0 4px 20px rgba(232,89,60,0.3)); animation: float 3s ease-in-out infinite; }
+  .cta-final__title { font-family: var(--font-heading); font-weight: 700; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; color: var(--text); }
+</style>

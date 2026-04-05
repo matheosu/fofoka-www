@@ -1,0 +1,462 @@
+{
+  "lang": "en",
+  "locale": "en-US",
+  "dir": "ltr",
+
+  "nav": {
+    "features": "Features",
+    "security": "Safety",
+    "help": "Help",
+    "download": "Download app",
+    "contact": "Contact",
+    "toggle_menu": "Open menu",
+    "lang_label": "🇺🇸 EN"
+  },
+
+  "hero": {
+    "title_1": "Discover what's happening",
+    "title_2": "around you.",
+    "title_3": "Anonymously.",
+    "subtitle": "Neighborhood gossip without revealing who you are. Post, like, and vanish — only people nearby can see.",
+    "tagline": "whisper · locate · vanish",
+    "app_store": "Available on the App Store",
+    "google_play": "Get it on Google Play",
+    "coming_soon": "Coming soon to stores"
+  },
+
+  "how_it_works": {
+    "title": "How it works",
+    "location": {
+      "title": "Location",
+      "desc": "Each post is only visible to people near the marked location. You set the radius when you post."
+    },
+    "anonymous": {
+      "title": "Anonymous",
+      "desc": "No real name, no profile photo. Your identity is never revealed — not even to us."
+    },
+    "ephemeral": {
+      "title": "Ephemeral",
+      "desc": "Posts expire over time. What was whispered, vanishes — as it should be."
+    }
+  },
+
+  "features": {
+    "title": "Features",
+    "temperature": {
+      "title": "Gossip temperature",
+      "desc": "The more likes, the hotter the post gets. Track what's on fire in your neighborhood in real time.",
+      "levels": {
+        "on_fire": "on fire",
+        "hot": "hot",
+        "normal": "normal",
+        "cold": "cold"
+      }
+    },
+    "comments": {
+      "title": "Anonymous comments",
+      "desc": "Reply to posts without revealing your identity. The conversation continues, anonymity remains."
+    },
+    "likes": {
+      "title": "Likes & reactions",
+      "desc": "Like or disagree with posts. The reaction system shows the neighborhood's mood."
+    },
+    "hashtags": {
+      "title": "Hashtags",
+      "desc": "Organize and find posts by topic. #wedding #work #neighbor — you pick the category."
+    },
+    "emoji": {
+      "title": "Emoji as avatar",
+      "desc": "Each post gets an emoji chosen by you. It's your anonymous face in the feed."
+    },
+    "map": {
+      "title": "Gossip map",
+      "desc": "See pins on the map showing the temperature of each post nearby. The hotter the post, the bigger the pin."
+    }
+  },
+
+  "ranking": {
+    "title": "Rankings & Achievements",
+    "subtitle": "Become the most famous gossiper in your neighborhood — without anyone knowing it's you.",
+    "rankings": {
+      "title": "Rankings",
+      "items": [
+        "Hottest posts in the neighborhood",
+        "Top gossipers in the city",
+        "Trending by state",
+        "National ranking"
+      ]
+    },
+    "achievements": {
+      "title": "Achievements",
+      "items": [
+        "Lighter — 10 hot posts",
+        "Arsonist — 50 hot posts",
+        "Spy — 100 posts viewed",
+        "Beloved — 500 likes",
+        "Legend — City's #1"
+      ]
+    },
+    "scale": "neighborhood → city → state → country!"
+  },
+
+  "security": {
+    "title_1": "Anonymous, but",
+    "title_2": "safe.",
+    "subtitle": "Anonymity is not an excuse for harassment. Fofoka has a robust moderation system to keep the environment healthy.",
+    "reports": {
+      "harassment": {
+        "title": "Harassment",
+        "desc": "Content that intimidates, threatens, or persecutes other users is removed immediately."
+      },
+      "fake": {
+        "title": "Misinformation",
+        "desc": "Disinformation and fake posts are flagged and verified by the community."
+      },
+      "spam": {
+        "title": "Spam",
+        "desc": "Repetitive content or disguised advertising is filtered automatically."
+      },
+      "hate": {
+        "title": "Hate speech",
+        "desc": "Discriminatory content or content that promotes hate is removed and the user banned."
+      }
+    },
+    "ai": "AI moderating 24 hours a day",
+    "encryption": "End-to-end encrypted data",
+    "report": "Instant report with response within 1 hour",
+    "privacy_link": "View full privacy policy"
+  },
+
+  "cta": {
+    "title_1": "Ready to hear",
+    "title_2": "what they're whispering?",
+    "counter": "Posts published today"
+  },
+
+  "footer": {
+    "product": "Product",
+    "legal": "Legal",
+    "contact_title": "Contact",
+    "features": "Features",
+    "security": "Safety",
+    "help": "Help",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "guidelines": "Guidelines",
+    "contact": "Contact",
+    "copyright": "© 2026 Fofoka. All rights reserved.",
+    "tagline": "whisper · locate · vanish",
+    "email": "contato@fofoka.com"
+  },
+
+  "help": {
+    "title": "Help Center",
+    "subtitle": "Find quick answers about Fofoka.",
+    "search_placeholder": "Search question...",
+    "no_results": "No questions found. Try other terms or",
+    "no_results_link": "contact us.",
+    "categories": {
+      "all": "All",
+      "account": "Account",
+      "privacy": "Privacy",
+      "content": "Content",
+      "safety": "Safety",
+      "technical": "Technical"
+    },
+    "faq": [
+      {
+        "q": "How does Fofoka guarantee my anonymity?",
+        "a": "Fofoka does not collect your real name, photo, or any data that identifies you. Your account is tied only to an anonymous identifier generated on your device. Even our team cannot know who posted what.",
+        "cat": "privacy"
+      },
+      {
+        "q": "Who can see my posts?",
+        "a": "Only users who are physically near the location marked on the post. The default radius is 500 meters, but you can adjust it when posting.",
+        "cat": "privacy"
+      },
+      {
+        "q": "How do I post gossip?",
+        "a": "Open the app, tap the orange (+) button, write the text, choose a representative emoji, confirm your location, and publish. It's quick and anonymous.",
+        "cat": "content"
+      },
+      {
+        "q": "What are post temperatures?",
+        "a": "Temperature shows popularity: 'cold' (fewer than 10 likes), 'normal' (10 to 99), 'hot' (100 to 499), and 'on fire' (500 or more). The hotter the post, the bigger the pin on the map.",
+        "cat": "content"
+      },
+      {
+        "q": "How does the report system work?",
+        "a": "Tap the three dots on any post and select 'Report'. Choose the category (harassment, fake news, spam, or hate speech). Our AI analyzes it within minutes and the human team reviews serious cases.",
+        "cat": "safety"
+      },
+      {
+        "q": "Can I delete a post I made?",
+        "a": "Yes. Since you don't have a public profile, save the link to your post or access it through your device's history. On the post screen, tap '...' and select 'Delete'.",
+        "cat": "account"
+      },
+      {
+        "q": "Do posts expire automatically?",
+        "a": "Yes. Cold posts (fewer than 10 likes) disappear after 24h. Hot posts last up to 7 days. On fire posts can stay up to 30 days in the ranking. After that, they are permanently deleted.",
+        "cat": "content"
+      },
+      {
+        "q": "Does the app use a lot of battery or data?",
+        "a": "Fofoka is optimized for minimal consumption. Geolocation is activated only when you open the app — never in the background without your explicit permission.",
+        "cat": "technical"
+      },
+      {
+        "q": "How do achievements work?",
+        "a": "Achievements are unlocked automatically when you reach milestones (e.g.: 10 hot posts = Lighter). You receive a notification and the badge appears on your anonymous profile.",
+        "cat": "account"
+      },
+      {
+        "q": "Is Fofoka available outside Brazil?",
+        "a": "Currently the app is available throughout Brazil. International expansion is planned for 2026. Follow our social media for updates.",
+        "cat": "technical"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "We respond within 48 hours. For urgent safety matters, we prioritize within 1 hour.",
+    "email_label": "Or send directly to",
+    "response_note": "We respond within 48 business hours.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "subjects": [
+        "Select a subject",
+        "Technical support",
+        "Content report",
+        "Partnership / press",
+        "Privacy and data",
+        "Other"
+      ],
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success_title": "Message sent!",
+      "success_body": "We'll get back to you soon at the email provided.",
+      "error": "An error occurred. Please try again or email us directly.",
+      "required": "Required field",
+      "placeholders": {
+        "name": "Your name",
+        "email": "you@email.com",
+        "message": "Describe your question or problem..."
+      }
+    }
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: April 2026",
+    "intro": "Fofoka was designed with privacy as a foundation, not an optional feature. This document explains exactly what data we collect, why, and how we protect your identity.",
+    "sections": [
+      {
+        "title": "Data we collect",
+        "body": [
+          "Fofoka collects only the minimum necessary to function. We do not collect your real name, email, phone number, profile photo, or any information that can identify you as a person.",
+          "Anonymous device identifier: a UUID generated locally and stored on your device. It is not linked to your identity.",
+          "Location data: collected only at the moment of creating or viewing a post, never in the background. We only store the approximate coordinate (100m radius) associated with the post, not the user.",
+          "Posted content: text, chosen emoji, and hashtags of posts you create. This content is public to nearby users and expires according to temperature rules.",
+          "Aggregate usage data: anonymous metrics such as app opens and interactions, with no personal data attached. We use this exclusively to improve the product."
+        ]
+      },
+      {
+        "title": "How we use your data",
+        "body": [
+          "Collected data is used exclusively to: (a) show relevant posts by your location, (b) calculate temperatures and rankings, (c) moderate inappropriate content, and (d) improve the app experience.",
+          "We do not sell, rent, or share your data with third parties for advertising purposes. Ever. Fofoka displays no ads and has no business model based on personal data.",
+          "Aggregated and anonymized usage data may be shared publicly as product statistics (e.g., 'X posts per day in Brazil')."
+        ]
+      },
+      {
+        "title": "Anonymity by design",
+        "body": [
+          "Unlike other social networks, Fofoka was built to make it technically impossible to link a post to a real person.",
+          "The device identifier is not sent along with posts. Each post is dissociated from any identifiable origin before being stored.",
+          "Even in the case of a court order, we can only provide the content of the post and the approximate coordinate — with no data that identifies the author."
+        ]
+      },
+      {
+        "title": "Storage and retention",
+        "body": [
+          "Posts are automatically deleted according to their temperature: cold in 24h, normal in 3 days, hot in 7 days, and on fire in up to 30 days.",
+          "The device identifier is stored locally on your device and can be deleted at any time by uninstalling the app.",
+          "Security backups are kept for up to 7 days and automatically deleted. We do not store user location history."
+        ]
+      },
+      {
+        "title": "Data sharing",
+        "body": [
+          "We share data with strictly necessary service providers: hosting infrastructure, AI content moderation system, and push notification service (anonymous token, no name or email).",
+          "All providers are contractually obligated not to use the data for other purposes and to follow Fofoka's privacy practices.",
+          "There is no transfer of data outside Brazil."
+        ]
+      },
+      {
+        "title": "Your rights",
+        "body": [
+          "You have the right to: confirmation of data processing, access to data, correction, anonymization, portability, deletion, and information about sharing.",
+          "Since Fofoka does not link data to real identities, some of these rights work differently. To request deletion of data associated with your device identifier, go to Settings > Privacy > Delete my data.",
+          "For other requests, contact our data protection officer at privacy@fofoka.com."
+        ]
+      },
+      {
+        "title": "Cookies and tracking",
+        "body": [
+          "The mobile app does not use cookies. The fofoka.com website uses only strictly necessary cookies for operation (session, language preference) — no tracking or advertising cookies.",
+          "We do not use tracking pixels, device fingerprinting, or any cross-site identification technology."
+        ]
+      },
+      {
+        "title": "Data Protection Officer (DPO)",
+        "body": [
+          "Our Data Protection Officer is available to answer questions, receive requests, and handle complaints related to personal data processing.",
+          "DPO contact: privacy@fofoka.com. We respond within 15 business days.",
+          "This policy may be updated periodically. In case of relevant changes, we will notify via in-app notification 30 days in advance."
+        ]
+      }
+    ]
+  },
+
+  "terms": {
+    "title": "Terms of Use",
+    "last_updated": "Last updated: April 2026",
+    "intro": "By using Fofoka, you agree to these terms. Read carefully — especially the section on prohibited content, which defines what we do not tolerate.",
+    "sections": [
+      {
+        "title": "Acceptance of terms",
+        "body": [
+          "Use of the Fofoka app and fofoka.com website is conditional on full acceptance of these Terms of Use. If you do not agree with any part, do not use the service.",
+          "You must be at least 16 years old to use Fofoka. By accepting these terms, you declare that you meet the minimum age requirement.",
+          "These terms may be updated. Relevant changes will be communicated at least 30 days in advance via in-app notification."
+        ]
+      },
+      {
+        "title": "Use of service",
+        "body": [
+          "Fofoka is a service for anonymous publication of geolocatable content. You are responsible for the content you post, even anonymously.",
+          "You agree to use the service in accordance with applicable law, these terms, and the Community Guidelines.",
+          "It is not permitted to use Fofoka for commercial purposes, post automation, content scraping, reverse engineering of the app, or any activity that harms other users or the integrity of the service."
+        ]
+      },
+      {
+        "title": "Prohibited content",
+        "body": [
+          "It is expressly prohibited to post on Fofoka: content constituting harassment, threat, stalking, or bullying; false information that may cause real harm to people or businesses; explicit sexual content or pornography; hate speech based on race, gender, sexual orientation, religion, or any other protected characteristic.",
+          "Also prohibited: spam and unauthorized advertising; content that violates third-party copyrights or intellectual property; personal data of others (ID numbers, address, phone, photos without consent); any content encouraging illegal activity.",
+          "Violating these rules may result in content removal, suspension, or permanent device ban."
+        ]
+      },
+      {
+        "title": "Moderation and reports",
+        "body": [
+          "Fofoka uses a combination of automated AI moderation and human review to identify violations. Automatic moderation is triggered in high-risk cases (threats, hate speech).",
+          "Any user can report inappropriate content. Malicious or coordinated mass reports (used to censor legitimate content) are also considered violations of these terms.",
+          "Moderation decisions may be contested through the appeal process described in the Community Guidelines."
+        ]
+      },
+      {
+        "title": "Intellectual property",
+        "body": [
+          "Content you post on Fofoka remains your authorship (even if anonymous). By publishing, you grant Fofoka a non-exclusive, worldwide, royalty-free license to display, reproduce, and distribute that content within the service.",
+          "The Fofoka brand, the masked pin logo, the app design, and all visual elements are the property of Fofoka Tecnologia Ltda. and may not be used without prior authorization.",
+          "Copyright infringement claims should be sent to legal@fofoka.com."
+        ]
+      },
+      {
+        "title": "Limitation of liability",
+        "body": [
+          "Fofoka is an intermediary service for user-generated content. We are not responsible for third-party content published on the platform, except after judicial notification or in cases provided by law.",
+          "The service is provided 'as is', without guarantee of uninterrupted availability. We are not responsible for damages resulting from misuse of the platform by other users.",
+          "In no event shall our total liability for damages exceed the amount paid by the user for the service in the last 12 months (which is zero, since the app is free)."
+        ]
+      },
+      {
+        "title": "Changes and termination",
+        "body": [
+          "We may modify, suspend, or terminate the service at any time. Changes that negatively affect users will be communicated 30 days in advance, except in cases of legal or security emergencies.",
+          "You may end your participation at any time by uninstalling the app. Since we do not collect identifiable data, there is no 'account deletion' in the traditional sense.",
+          "These terms are governed by Brazilian law. Any disputes will be resolved in the courts of São Paulo, Brazil."
+        ]
+      }
+    ]
+  },
+
+  "guidelines": {
+    "title": "Community Guidelines",
+    "last_updated": "Last updated: April 2026",
+    "intro": "Fofoka exists for humor, curiosity, and the lightness of everyday life. These guidelines protect that space for everyone — including you.",
+    "sections": [
+      {
+        "title": "What you can post",
+        "body": [
+          "Gossip about situations and places (not about specifically identifiable people): what happened at the restaurant on the corner, the argument in the condo, the surprise event in the park.",
+          "Funny observations, neighborhood curiosities, useful alerts for the community (pothole in the road, local event, construction disrupting traffic).",
+          "Opinions about services and businesses, as long as based on real experience and not identifying specific employees.",
+          "Stories, accounts, and comments that are clearly humorous or entertaining, as long as they do not harm real people."
+        ]
+      },
+      {
+        "title": "What is not allowed",
+        "body": [
+          "Identifying real people by name, nickname, detailed physical description, or any other information that allows discovering their identity. Anonymity protects everyone — those who post and those being posted about.",
+          "Content constituting harassment, threat, stalking, or bullying, even without mentioning a name. An intimidating tone is sufficient for removal.",
+          "False information presented as truth with potential for real harm: defamation, fake news about public health or safety.",
+          "Hate speech based on race, color, ethnicity, religion, gender, sexual orientation, disability, or any other characteristic. Offensive humor on these grounds is also not tolerated.",
+          "Explicit sexual content, non-consensual nudity, or any sexualized material involving minors.",
+          "Sharing others' personal data: social security numbers, home addresses, phone numbers, photos, real-time location."
+        ]
+      },
+      {
+        "title": "How to use the report system",
+        "body": [
+          "Seen something that violates these guidelines? Tap the three dots on the post and select 'Report'. Choose the category that best describes the problem.",
+          "Available categories: Harassment (threats, stalking, intimidation), Misinformation (disinformation with potential harm), Spam (advertising, repetition, automation), Hate speech (discrimination, prejudice).",
+          "After reporting: our AI evaluates within minutes. High-risk cases have human review within 1 hour. You will receive a notification with the result.",
+          "Malicious reports — used to silence legitimate content — are taken seriously and may result in suspension of the reporter."
+        ]
+      },
+      {
+        "title": "Consequences of violations",
+        "body": [
+          "Content removal: the post is removed immediately. You receive a notification explaining the reason.",
+          "Formal warning: for first minor violations, we send an educational notice without penalty.",
+          "Temporary suspension: repeated or moderate violations result in suspension from 24 hours to 30 days, during which you can browse but not post.",
+          "Permanent device ban: serious violations (threats, CSAM, repeated hate speech) result in a permanent ban on the device. It is not possible to create a new account on the same device.",
+          "Referral to authorities: cases constituting crimes (threats, child exploitation, incitement to violence) will be reported to competent authorities as required by law."
+        ]
+      },
+      {
+        "title": "Appeal process",
+        "body": [
+          "Believe your content was removed by mistake? You have 7 days after removal to request a review.",
+          "How to appeal: go to Settings > My Account > Moderation History and tap 'Contest decision' on the removed post. Explain why you believe the removal was unwarranted.",
+          "The review is done by a different person than the one who made the original decision. The response deadline is up to 72 hours.",
+          "If the appeal succeeds, the content is restored and the penalty reversed. If unsuccessful, the decision is final.",
+          "For permanent ban cases, the appeal process must be done by email to appeals@fofoka.com, within 30 days of the ban."
+        ]
+      }
+    ]
+  },
+
+  "seo": {
+    "site_name": "Fofoka",
+    "home_title": "Fofoka — Anonymous neighborhood gossip",
+    "home_description": "Discover what's happening around you anonymously. Post geolocated gossip, like, comment, and vanish — only people nearby can see.",
+    "home_keywords": "gossip, anonymous, geolocation, social network, neighborhood, app",
+    "help_title": "Help — Fofoka",
+    "help_description": "Fofoka Help Center. Find answers about anonymity, privacy, content, and app features.",
+    "contact_title": "Contact — Fofoka",
+    "contact_description": "Get in touch with the Fofoka team. We respond within 48 hours.",
+    "privacy_title": "Privacy Policy — Fofoka",
+    "privacy_description": "Learn how Fofoka protects your privacy and anonymity.",
+    "terms_title": "Terms of Use — Fofoka",
+    "terms_description": "Terms and conditions of use for the Fofoka application.",
+    "guidelines_title": "Community Guidelines — Fofoka",
+    "guidelines_description": "Fofoka community rules: what's allowed, what's not, and how moderation works."
+  }
+}

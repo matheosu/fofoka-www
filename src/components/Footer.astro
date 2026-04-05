@@ -1,0 +1,232 @@
+---
+import pt from '../i18n/pt.json';
+import en from '../i18n/en.json';
+
+export interface Props {
+  lang: 'pt' | 'en';
+}
+
+const { lang } = Astro.props;
+const t = lang === 'pt' ? pt : en;
+
+const prefix = `/${lang}`;
+
+const productLinks = [
+  { label: t.footer.features,  href: `${prefix}/#recursos` },
+  { label: t.footer.security,  href: `${prefix}/#seguranca` },
+  { label: t.footer.help,      href: lang === 'pt' ? `${prefix}/ajuda` : `${prefix}/help` },
+];
+
+const legalLinks = [
+  { label: t.footer.privacy,    href: lang === 'pt' ? `${prefix}/privacidade` : `${prefix}/privacy` },
+  { label: t.footer.terms,      href: lang === 'pt' ? `${prefix}/termos` : `${prefix}/terms` },
+  { label: t.footer.guidelines, href: lang === 'pt' ? `${prefix}/diretrizes` : `${prefix}/guidelines` },
+];
+---
+
+<footer class="footer">
+  <div class="container footer__inner">
+
+    <!-- Brand column -->
+    <div class="footer__brand">
+      <a href={`${prefix}/`} class="footer__logo" aria-label="Fofoka">
+        <img
+          src="/assets/logos/logo-darkmode.svg"
+          alt="Fofoka"
+          width="32"
+          height="32"
+        />
+        <span class="footer__logo-text">fofoka</span>
+      </a>
+      <p class="footer__tagline">{t.footer.tagline}</p>
+      <a href={`mailto:${t.footer.email}`} class="footer__email">
+        {t.footer.email}
+      </a>
+    </div>
+
+    <!-- Product links -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">{t.footer.product}</h3>
+      <ul class="footer__links">
+        {productLinks.map((link) => (
+          <li>
+            <a href={link.href} class="footer__link">{link.label}</a>
+          </li>
+        ))}
+        <li>
+          <a href={`${prefix}/#download`} class="footer__link">{t.nav.download}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Legal links -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">{t.footer.legal}</h3>
+      <ul class="footer__links">
+        {legalLinks.map((link) => (
+          <li>
+            <a href={link.href} class="footer__link">{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer__col">
+      <h3 class="footer__col-title">{t.footer.contact_title}</h3>
+      <ul class="footer__links">
+        <li>
+          <a href={lang === 'pt' ? `${prefix}/contato` : `${prefix}/contact`} class="footer__link">
+            {t.footer.contact}
+          </a>
+        </li>
+        <li>
+          <a href={`mailto:${t.footer.email}`} class="footer__link footer__link--email">
+            {t.footer.email}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="footer__copyright">{t.footer.copyright}</p>
+      <p class="footer__bottom-tagline">{t.footer.tagline}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-footer);
+    border-top: 1px solid var(--border);
+    padding-top: 64px;
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: 640px) {
+    .footer__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer__inner {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+  }
+
+  /* Brand */
+  .footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+  }
+
+  .footer__logo-text {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--fogo);
+  }
+
+  .footer__tagline {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 3px;
+    text-transform: lowercase;
+  }
+
+  .footer__email {
+    font-size: 13px;
+    color: var(--text-3);
+    transition: color var(--transition-fast);
+  }
+
+  .footer__email:hover {
+    color: var(--fogo);
+  }
+
+  /* Columns */
+  .footer__col-title {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--text-3);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer__link {
+    font-size: 14px;
+    color: var(--text-2);
+    transition: color var(--transition-fast);
+  }
+
+  .footer__link:hover {
+    color: var(--text);
+  }
+
+  .footer__link--email {
+    font-size: 13px;
+  }
+
+  /* Bottom bar */
+  .footer__bottom {
+    border-top: 1px solid var(--border);
+    padding: 20px 0;
+  }
+
+  .footer__bottom-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .footer__bottom-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    color: var(--text-3);
+  }
+
+  .footer__bottom-tagline {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-3);
+    letter-spacing: 2px;
+  }
+</style>

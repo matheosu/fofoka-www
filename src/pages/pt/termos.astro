@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import LegalPage from '../../components/LegalPage.astro';
+import pt from '../../i18n/pt.json';
+
+const t = pt;
+---
+
+<Base
+  title={t.seo.terms_title}
+  description={t.seo.terms_description}
+  lang="pt"
+  canonicalPath="/termos"
+>
+  <LegalPage
+    title={t.terms.title}
+    last_updated={t.terms.last_updated}
+    intro={t.terms.intro}
+    sections={t.terms.sections}
+    backLabel="← Voltar ao início"
+    backHref="/pt/"
+  />
+</Base>
